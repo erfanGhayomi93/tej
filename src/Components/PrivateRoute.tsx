@@ -11,8 +11,7 @@ type IPrivateRoute = {
 }
 
 const PrivateRoute : FC<IPrivateRoute> = ({ children }) => {
-  const authUser = useSelector((state: RootState) => state.counterSlice.username)
-
+  const authUser = useSelector((state: RootState) => state.userSlice.id)
     
     if (!authUser) {
         // not logged in so redirect to login page with the return url
